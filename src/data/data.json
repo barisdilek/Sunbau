@@ -1,0 +1,71 @@
+{
+    "HeaderNavigation":0,
+    "Main":{
+        "themen":[{
+                "img": "01.jpg",
+                "title": "Unsere Motivation Leon",
+                "desc": "Unsere Arbeit ist unsere Leidenschaft und ein positiver Antrieb für jeden neuen Tag. Sie bringt uns dazu, Herausforderung als Chance zu verstehen und neue Ziele zu erreichen."
+            },
+            {
+                "img": "02.jpg",
+                "title": "Unsere Werte",
+                "desc": "Warum man auf uns zählen kann? Weil unser Unternehmen mehr ist, als nur ein Business. Jede Person in unserem Team ist einzigartig – und wir alle teilen die gleichen Werte."
+            }, 
+            {
+                "img": "03.jpg",
+                "title": "Unsere Vision",
+                "desc": "Es gibt eine einfache Wahrheit: Wenn Sie an das glauben, was Sie tun, können Sie Großes erreichen. Das ist der Grund, warum Ihnen bei der Erreichung Ihres Zieles helfen möchten."
+            }        
+        ]
+    },
+    "Fokus":[{
+            "img": "01.jpg",
+            "title": "Unsere Leistungen",
+            "desc": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST"
+        },
+        {
+            "img": "02.jpg",
+            "title": "SunBau&Contracting",
+            "desc": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST"
+        }    
+    ],
+    "Team":[{
+            "img": "01.jpg",
+            "name": "Überschrift",
+            "job": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTT"
+        },
+        {
+            "img": "02.jpg",
+            "name": "Überschrift",
+            "job": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTT"
+        }, 
+        {
+            "img": "03.jpg",
+            "name": "Überschrift",
+            "job": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTT"
+        }
+    ],
+    "StellenAnzeigen":[{
+            "img": "01.jpg",
+            "title": "Bauleiter im Netzbau (m/w/d)",
+            "desc": "Wir sind mehr als ein nur ein Haufen Experten: Bei uns arbeiten kluge Köpfe als Freunde zusammen. Gemeinsam stecken wir viel Freude und Leidenschaft in unser Produkt, das zeichnet uns aus.",
+            "detail": "-"
+        },
+        {
+            "img": "02.jpg",
+            "title": "Bauleiter im Netzbau (m/w/d)",
+            "desc": "Wir sind mehr als ein nur ein Haufen Experten: Bei uns arbeiten kluge Köpfe als Freunde zusammen. Gemeinsam stecken wir viel Freude und Leidenschaft in unser Produkt, das zeichnet uns aus.",
+            "detail": "-"
+        }
+    ],
+    "Kontakt": {
+        "address": " Stadt Mitte, Berlin, BE 12000 ",
+        "phone": "+XX XXX XXX XXX XX",
+        "email": "info@company.com",
+        "facebook": "fb.com",
+        "twitter": "twitter.com",
+        "youtube": "youtube.com"
+    },
+    "FooterNavigation":{
+    }
+}
