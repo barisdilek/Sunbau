@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/sunbau/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/sunbau/static/js/main.24209c5f.chunk.js",
+    "main.js.map": "/sunbau/static/js/main.24209c5f.chunk.js.map",
+    "runtime-main.js": "/sunbau/static/js/runtime-main.eec9cf86.js",
+    "runtime-main.js.map": "/sunbau/static/js/runtime-main.eec9cf86.js.map",
+    "static/js/2.49f57aab.chunk.js": "/sunbau/static/js/2.49f57aab.chunk.js",
+    "static/js/2.49f57aab.chunk.js.map": "/sunbau/static/js/2.49f57aab.chunk.js.map",
+    "index.html": "/sunbau/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/sunbau/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.49f57aab.chunk.js.LICENSE.txt": "/sunbau/static/js/2.49f57aab.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eec9cf86.js",
+    "static/js/2.49f57aab.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.24209c5f.chunk.js"
+  ]
+}
