@@ -534,19 +534,6 @@ label {
   width: 550px;
 }
 
-#team {
-  padding: 100px 0 0px 0;
-}
-
-#team .wrapword {
-  width: 320px;
-}
-
-#team h2 {
-  position: relative;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-}
 #team h2::after {
   position: absolute;
   content: "";
@@ -555,6 +542,45 @@ label {
   width: 60px;
   bottom: 0;
   left: 0;
+}
+
+#team {
+  padding: 100px 0 60px 0;
+  background: linear-gradient(to right, #ed1b24 0%, #f58187 100%);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#team .wrapword {
+  width: 320px;
+}
+
+#team .section-title {
+  margin-bottom: 40px;
+}
+#team .section-title p {
+  font-size: 16px;
+}
+#team h2 {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+#team .section-title h2::after {
+  position: absolute;
+  content: "";
+  background: rgba(255, 255, 255, 0.3);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 30px;
+}
+#team h3 {
+  color: #fff;
+  margin-top: 80px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  font-weight: 400;
 }
 
 #home {

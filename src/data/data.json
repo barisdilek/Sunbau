@@ -43,6 +43,21 @@
             "img": "03.jpg",
             "name": "Überschrift",
             "job": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTT"
+        }, 
+        {
+            "img": "04.jpg",
+            "name": "Überschrift",
+            "job": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTT"
+        }, 
+        {
+            "img": "05.jpg",
+            "name": "Überschrift",
+            "job": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTT"
+        }, 
+        {
+            "img": "06.jpg",
+            "name": "Überschrift",
+            "job": "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTT"
         }
     ],
     "StellenAnzeigen":[{
@@ -63,15 +78,19 @@
         [
             {
                 "title": "Hauptsitz",
-                "address": "Stadt Mitte, Berlin, BE 12000 "
+                "addressline1": "Herpersdorfer Str. 18",
+                "addressline2": "91207 Lauf an der Pegnitz"
             },
             {
                 "title": "Büro",
-                "address": "Stadt Mitte, Berlin, BE 12001 "
+                "addressline1": "Katzwanger Str. 150",
+                "addressline2": "90461 Nümberg "
             }
         ],
-        "phone": "+XX XXX XXX XXX XX",
-        "email": "info@company.com",
+        "phoneTitle": "Telefon",
+        "phone": "+49 1782391687",
+        "emailTitle": "E-Mail",
+        "email": "info@sunbaufibersta.com",
         "facebook": "fb.com",
         "twitter": "twitter.com",
         "youtube": "youtube.com"
