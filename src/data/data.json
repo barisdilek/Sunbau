@@ -59,7 +59,17 @@
         }
     ],
     "Kontakt": {
-        "address": " Stadt Mitte, Berlin, BE 12000 ",
+        "addresses": 
+        [
+            {
+                "title": "Hauptsitz",
+                "address": "Stadt Mitte, Berlin, BE 12000 "
+            },
+            {
+                "title": "Büro",
+                "address": "Stadt Mitte, Berlin, BE 12001 "
+            }
+        ],
         "phone": "+XX XXX XXX XXX XX",
         "email": "info@company.com",
         "facebook": "fb.com",

@@ -37,7 +37,7 @@ export class Fokus extends Component {
                       <p className="wrapword">{d.desc}</p>
                     </div>
                   </div>
-                  <div className="col-md-3 col-md-offset-2"> <img src={`img/fokus/${d.img}`}  alt="..." className="fokus-img" /> </div>
+                  <div className="col-md-3 col-md-offset-2"> <div className="thumbnail"> <img src={`img/fokus/${d.img}`}  alt="..." className="fokus-img" /> </div></div>
                 </div>
               ))
             : "loading"}

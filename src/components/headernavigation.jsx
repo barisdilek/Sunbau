@@ -52,7 +52,12 @@ export class Headernavigation extends Component {
     return (
           <nav id="menu" className="navbar navbar-default navbar-fixed-top">
             <div className="container">
-              <div className="col-md-12 col-md-offset-0">
+              <div className="col-md-4 col-md-offset-0 logo">
+                  <a className="navbar-brand page-scroll" href="#page-top">
+                    <img src="./img/logo.jpg" alt="" className="navbar-brand-img" />
+                  </a> <br/><span>{"“Wir schaffen Verbindungen”"}</span>
+              </div>
+              <div className="col-md-8 col-md-offset-0">
                 <div className="navbar-header">
                   <button
                     type="button"
@@ -67,9 +72,7 @@ export class Headernavigation extends Component {
                     <span className="icon-bar"></span>{" "}
                   </button>
                   
-                  <a className="navbar-brand page-scroll" href="#page-top">
-                    <img src="./img/logo.jpg" alt="" className="navbar-brand-img" /><span>{"“Wir schaffen Verbindungen”"}</span>
-                  </a>
+                  
             
                 </div>
               </div>

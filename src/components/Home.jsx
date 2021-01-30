@@ -41,34 +41,28 @@ export class Home extends Component {
               </div>
             </div>
           </div> */}
-          <div >
-            <div className="container">
-              <div className="intro">
-                <div className="col-md-8 col-md-offset-1">
-                  
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 col-md-offset-2">
+                <div className="thumbnail">
                   <img  src={`img/intro-bg.jpg`}  alt="..." className="intro-img" />
-                  
-                </div>
-              </div> 
-              <div className="row">
-                <div className="col-md-8 col-md-offset-6">
-                  
-                  <Link href="#subHeader"  className="arrow" to="subHeader" spy={true} smooth={true} duration={1000}>
-                    &#11167;
-                  </Link>
-                        <br/>{" "}
-                        <br/>{" "}
-                        <br/>{" "}
-                        <br/>{" "}
-                        <br/>{" "}
-                        <br/>{" "}
-                        <br/>{" "}
-                        <br/>{" "}
-                        <br/>{" "}
                 </div>
               </div>
             </div>
           </div>
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2 arrow-text">
+              <div className="thumbnail">
+                <Link href="#subHeader"  className="arrow" to="subHeader" spy={true} smooth={true} duration={1000}>
+                  <img  src={`img/down.png`}  alt="..." className="arrow-img" width="50"/>
+                  {/* &#11167; */}
+                </Link>
+              </div>
+                   
+            </div>
+          </div>
+
+
           <div className="container">
             <div className="row">
             <div id="subHeader">{" "}</div>
@@ -88,7 +82,7 @@ export class Home extends Component {
                 : "loading"}
             </div>
           </div>
-          
+
         </header>
         <Footernavigation  data={this.state.menuItem}/>
       </div>

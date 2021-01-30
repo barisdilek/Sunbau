@@ -41,19 +41,23 @@ export class Kontact extends Component {
               <div className="col-md-8 col-md-offset-0">
                 <div className="contact-item">
                   <h3>Contact Info</h3>
-                  <p>
-                    <span>
-                      <i className="fa fa-map-marker"></i> Address
-                    </span>
-                    {this.state.sunbau.Kontact ? this.state.sunbau.Kontact.address : "loading"}
-                  </p>
+                  {this.state.sunbau.Kontakt
+                    ? this.state.sunbau.Kontakt.addresses.map((d, i) => (
+                        <p key={`divhome-${i}`}>
+                          <span>
+                            <i className="fa fa-map-marker"></i> {d.title}
+                          </span>
+                          {d.address}
+                        </p>
+                      ))
+                    : "loading"}
                 </div>
                 <div className="contact-item">
                   <p>
                     <span>
                       <i className="fa fa-phone"></i> Phone
                     </span>{" "}
-                    {this.state.sunbau.Kontact ? this.state.sunbau.Kontact.phone : "loading"}
+                    {this.state.sunbau.Kontakt ? this.state.sunbau.Kontakt.phone : "loading"}
                   </p>
                 </div>
                 <div className="contact-item">
@@ -61,7 +65,7 @@ export class Kontact extends Component {
                     <span>
                       <i className="fa fa-envelope-o"></i> Email
                     </span>{" "}
-                    {this.state.sunbau.Kontact ? this.state.sunbau.Kontact.email : "loading"}
+                    {this.state.sunbau.Kontakt ? this.state.sunbau.Kontakt.email : "loading"}
                   </p>
                 </div>
               </div>
