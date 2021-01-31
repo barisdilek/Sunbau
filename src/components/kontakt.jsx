@@ -47,8 +47,8 @@ export class Kontact extends Component {
                           <span>
                             <i className="fa fa-map-marker"></i> {d.title}
                           </span>
-                          {d.addressline1}<br/>
-                          {d.addressline2}
+                          <a href={d.addressLink}>{d.addressline1}<br/>
+                          {d.addressline2}</a>
                         </p>
                       ))
                     : "loading"}
@@ -58,7 +58,7 @@ export class Kontact extends Component {
                     <span>
                       <i className="fa fa-phone"></i> {this.state.sunbau.Kontakt ? this.state.sunbau.Kontakt.phoneTitle : "loading"}
                     </span>{" "}
-                    {this.state.sunbau.Kontakt ? this.state.sunbau.Kontakt.phone : "loading"}
+                    {this.state.sunbau.Kontakt ? <a href={"tel:"+this.state.sunbau.Kontakt.phone}>{this.state.sunbau.Kontakt.phone}</a> : "loading"}
                   </p>
                 </div>
                 <div className="contact-item">
@@ -66,7 +66,7 @@ export class Kontact extends Component {
                     <span>
                       <i className="fa fa-envelope-o"></i> {this.state.sunbau.Kontakt ? this.state.sunbau.Kontakt.emailTitle : "loading"}
                     </span>{" "}
-                    {this.state.sunbau.Kontakt ? this.state.sunbau.Kontakt.email : "loading"}
+                    {this.state.sunbau.Kontakt ? <a href={"mailto:"+this.state.sunbau.Kontakt.email}>{this.state.sunbau.Kontakt.email}</a> : "loading"}
                   </p>
                 </div>
               </div>

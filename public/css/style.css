@@ -445,6 +445,12 @@ label {
   margin-bottom: 10px;
   display: block;
 }
+#kontakt .contact-item a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
 #kontakt .contact-item i.fa {
   margin-right: 10px;
 }
