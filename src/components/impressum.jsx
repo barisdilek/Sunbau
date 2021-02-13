@@ -6,8 +6,10 @@ import '../App.css';
 
 export class Impressum extends Component {
   state = {
-    sunbau: {},
-    menuItem: {selectedItem:6}
+    sunbau: {}
+  }
+  navState = {
+    menuItem: {selectedItem:6, menuType:3}
   }
   getSunbau() {
     this.setState({sunbau : JsonData})
@@ -19,11 +21,24 @@ export class Impressum extends Component {
   render() {
     return (
       <div>
-        <Headernavigation data={this.state.menuItem}/>
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <div id="impressum">
+        {this.props.data ?  this.props.data.menuType!==0 ? 
+          <div>
+            <Headernavigation data={this.props.data}/> 
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>
+          : 
+            "" 
+          : 
+          <div>
+            <Headernavigation data={this.navState.menuItem}/>
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>
+        }
+        <div id="impressum" class="pageSection impressumSection">
           <div className="container">
             <h2>Impressum</h2>
             <div className="row">
@@ -44,7 +59,7 @@ export class Impressum extends Component {
             </div>
           </div>
         </div>
-        <Footernavigation  data={this.state.menuItem}/>
+        {this.props.data ?  this.props.data.menuType!==0 ? <Footernavigation data={this.props.data}/> :"" : <Footernavigation data={this.navState.menuItem}/>}
       </div>
     );
   }

@@ -6,13 +6,15 @@ import $ from 'jquery';
 export class Headernavigation extends Component {
 
   componentDidMount() {
-    let selectedItem = this.props.data.selectedItem
+    let selectedItem = this.props.data.selectedItem;
+    //let menuType = this.props.data.menuType;
+    //alert(selectedItem + ' : ' + menuType )
     let selectedItemName = "home"
     switch(selectedItem) {
       case 1:
       {
         selectedItemName = "home";
-        break
+        break;
       }
       case 2:
       {
@@ -34,6 +36,10 @@ export class Headernavigation extends Component {
         selectedItemName = "stellenanzeigen";
         break
       }
+      default : {
+        selectedItemName = "home";
+        break
+      }
     }
     $( document ).ready(function() {
       //alert(selectedItemName)
@@ -53,9 +59,10 @@ export class Headernavigation extends Component {
           <nav id="menu" className="navbar navbar-default navbar-fixed-top">
             <div className="container">
               <div className="col-md-4 col-md-offset-0 logo">
-                  <a className="navbar-brand page-scroll" href="#page-top">
-                    <img src="./img/logo.jpg" alt="" className="navbar-brand-img" />
-                  </a> <br/><span>{"“Wir schaffen Verbindungen”"}</span>
+                  <Link2 id="pageTop" href="#page-top" className="navbar-brand page-scroll" to="home" spy={true} smooth={true}  duration={1000}>
+                  <img src="./img/logo.jpg" alt="" className="navbar-brand-img" />
+                  </Link2>
+                   <br/><span>{"“Wir schaffen Verbindungen”"}</span>
               </div>
               <div className="col-md-8 col-md-offset-0">
                 <div className="navbar-header">
@@ -81,86 +88,122 @@ export class Headernavigation extends Component {
                   <ul className="nav navbar-nav navbar-left">
                     {
                         this.props.data ? 
-                          this.props.data.selectedItem === 1 ? 
+                          this.props.data.selectedItem === 1 || this.props.data.menuType === 2 ? 
                               <li>
-                                <Link2 id="homeClick" href="#home" className="page-scroll" to="home" spy={true} smooth={true}  duration={1000}>
+                                <Link2 id="homeClick" href="#home" className="page-scroll topClick" to="home" spy={true} smooth={true}  duration={1000}>
                                   Home
                                 </Link2>
                               </li>
                             : 
+                              this.props.data.menuType === 3 ? 
+                                <li>
+                                  <Link1 id="homeClick" href="#home" className="page-scroll topClick" to="." duration={1000}>
+                                    Home
+                                  </Link1>
+                                </li>
+                                :
+                                <li>
+                                  <Link1 id="homeClick" href="#home" className="page-scroll topClick" to="/home" duration={1000}>
+                                    Home
+                                  </Link1>
+                                </li>
+                        : 
+                        "loading"
+                    }
+                    {
+                      
+                        this.props.data ? 
+                          this.props.data.selectedItem === 2 || this.props.data.menuType === 2 ? 
                               <li>
-                                <Link1 id="homeClick" href="#home" className="page-scroll" to="/home" duration={1000}>
-                                  Home
-                                </Link1>
+                                <Link2 id="fokusClick" href="#fokus" className="page-scroll topClick" to="fokus" spy={true} smooth={true}  duration={1000}>
+                                  Fokus
+                                </Link2>
                               </li>
+                            : 
+                              this.props.data.menuType === 3 ? 
+                                <li>
+                                  <Link1 id="fokusClick" href="#fokus" className="page-scroll topClick" to="." duration={1000}>
+                                  Fokus
+                                  </Link1>
+                                </li>
+                                :
+                                <li>
+                                  <Link1 id="fokusClick" href="#fokus" className="page-scroll topClick" to="fokus" duration={1000}>
+                                    Fokus
+                                  </Link1>
+                                </li>
                         : 
                         "loading"
                     }
                     {
                         this.props.data ? 
-                          this.props.data.selectedItem === 2 ? 
+                          this.props.data.selectedItem === 3 || this.props.data.menuType === 2 ? 
                               <li>
-                                <Link2 id="fokusClick" href="#fokus" className="page-scroll" to="fokus" spy={true} smooth={true}  duration={1000}>
-                                  Fokus
-                                </Link2>
-                              </li>
-                            : 
-                              <li>
-                                <Link1 id="fokusClick" href="#fokus" className="page-scroll" to="fokus" duration={1000}>
-                                  Fokus
-                                </Link1>
-                              </li>
-                        : 
-                        "loading"
-                    }
-                    {
-                        this.props.data ? 
-                          this.props.data.selectedItem === 3 ? 
-                              <li>
-                                <Link2 id="teamClick" href="#team" className="page-scroll" to="team" spy={true} smooth={true}  duration={1000}>
+                                <Link2 id="teamClick" href="#team" className="page-scroll topClick" to="team" spy={true} smooth={true}  duration={1000}>
                                   Team
                                 </Link2>
                               </li>
                             : 
-                            <li>
-                              <Link1 id="teamClick" href="#team" className="page-scroll" to="team"   duration={1000}>
-                                Team
-                              </Link1>
-                            </li>
+                              this.props.data.menuType === 3 ? 
+                                <li>
+                                  <Link1 id="teamClick" href="#team" className="page-scroll topClick" to="." duration={1000}>
+                                    Team
+                                  </Link1>
+                                </li>
+                                :
+                                <li>
+                                  <Link1 id="teamClick" href="#team" className="page-scroll topClick" to="team"   duration={1000}>
+                                    Team
+                                  </Link1>
+                                </li>
                         : 
                         "loading"
                     }
                     {
                         this.props.data ? 
-                          this.props.data.selectedItem === 4 ? 
+                          this.props.data.selectedItem === 4 || this.props.data.menuType === 2 ? 
                               <li>
-                                <Link2 id="kontaktClick" href="#kontakt" className="page-scroll" to="kontakt" spy={true} smooth={true}  duration={1000}>
+                                <Link2 id="kontaktClick" href="#kontakt" className="page-scroll topClick" to="kontakt" spy={true} smooth={true}  duration={1000}>
                                   Kontakt
                                 </Link2>
                               </li>
                             : 
-                              <li>
-                                <Link1 id="kontaktClick" href="#kontakt" className="page-scroll" to="kontakt"   duration={1000}>
-                                  Kontakt
-                                </Link1>
-                              </li>
+                              this.props.data.menuType === 3 ? 
+                                <li>
+                                  <Link1 id="kontaktClick" href="#kontakt" className="page-scroll topClick" to="." duration={1000}>
+                                    Kontakt
+                                  </Link1>
+                                </li>
+                                :
+                                <li>
+                                  <Link1 id="kontaktClick" href="#kontakt" className="page-scroll topClick" to="kontakt"   duration={1000}>
+                                    Kontakt
+                                  </Link1>
+                                </li>
                         : 
                         "loading"
                     }
                     {
                         this.props.data ? 
-                          this.props.data.selectedItem === 5 ? 
+                          this.props.data.selectedItem === 5 || this.props.data.menuType === 2 ? 
                               <li>
-                                <Link2 id="stellenanzeigenClick" href="#stellenanzeigen" className="page-scroll" to="stellenanzeigen" spy={true} smooth={true}  duration={1000}>
+                                <Link2 id="stellenanzeigenClick" href="#stellenanzeigen" className="page-scroll topClick" to="stellenanzeigen" spy={true} smooth={true}  duration={1000}>
                                   Stellenanzeigen
                                 </Link2>
                               </li>
                             : 
-                              <li>
-                                <Link1 id="stellenanzeigenClick" href="#stellenanzeigen" className="page-scroll" to="stellenanzeigen"   duration={1000}>
-                                  Stellenanzeigen
-                                </Link1>
-                              </li>
+                              this.props.data.menuType === 3 ? 
+                                <li>
+                                  <Link1 id="stellenanzeigenClick" href="#stellenanzeigen" className="page-scroll topClick" to="." duration={1000}>
+                                    Stellenanzeigen
+                                  </Link1>
+                                </li>
+                                :
+                                <li>
+                                  <Link1 id="stellenanzeigenClick" href="#stellenanzeigen" className="page-scroll topClick" to="stellenanzeigen"   duration={1000}>
+                                    Stellenanzeigen
+                                  </Link1>
+                                </li>
                         : 
                         "loading"
                     }

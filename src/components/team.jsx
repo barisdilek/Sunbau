@@ -6,8 +6,10 @@ import '../App.css';
 
 export class Team extends Component {
   state = {
-    sunbau: {},
-    menuItem: {selectedItem:3}
+    sunbau: {}
+  }
+  navState = {
+    menuItem: {selectedItem:3, menuType:1}
   }
   getSunbau() {
     this.setState({sunbau : JsonData})
@@ -19,11 +21,24 @@ export class Team extends Component {
   render() {
     return (
       <div>
-        <Headernavigation data={this.state.menuItem}/>
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <div id="team">
+        {this.props.data ?  this.props.data.menuType!==0 ? 
+          <div>
+            <Headernavigation data={this.props.data}/> 
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>
+          : 
+            "" 
+          : 
+          <div>
+            <Headernavigation data={this.navState.menuItem}/>
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>
+        }
+        <div id="team" class="pageSection topPageSection teamSection">
           <div className="container">
             
             <div className="row">
@@ -60,7 +75,7 @@ export class Team extends Component {
           </div>
         </div>
         
-        <Footernavigation  data={this.state.menuItem}/>
+        {this.props.data ?  this.props.data.menuType!==0 ? <Footernavigation data={this.props.data}/> :"" : <Footernavigation data={this.navState.menuItem}/>}
       </div>
     );
   }

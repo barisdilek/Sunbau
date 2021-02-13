@@ -6,8 +6,10 @@ import '../App.css';
 
 export class Fokus extends Component {
   state = {
-    sunbau: {},
-    menuItem: {selectedItem:2}
+    sunbau: {}
+  }
+  navState = {
+    menuItem: {selectedItem:2, menuType:1}
   }
   getSunbau() {
     this.setState({sunbau : JsonData})
@@ -19,13 +21,24 @@ export class Fokus extends Component {
   render() {
     return (
       <div>
-        <Headernavigation data={this.state.menuItem}/>
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <div id="fokus">
+        {this.props.data ?  this.props.data.menuType!==0 ? 
+          <div>
+            <Headernavigation data={this.props.data}/>
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div> :"" : 
+          <div>
+            <Headernavigation data={this.navState.menuItem}/>
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>}
+        <div id="fokus" class="pageSection topPageSection fokusSection">
           <div className="container">
             <h2>Fokus</h2>
             {this.state.sunbau.Fokus
@@ -56,7 +69,7 @@ export class Fokus extends Component {
         <br/>{" "}
         <br/>{" "}
         <br/>{" "}
-        <Footernavigation  data={this.state.menuItem}/>
+        {this.props.data ?  this.props.data.menuType!==0 ? <Footernavigation data={this.props.data}/> :"" : <Footernavigation data={this.navState.menuItem}/>}
       </div>
     );
   }

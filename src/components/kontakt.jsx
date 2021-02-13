@@ -6,8 +6,10 @@ import '../App.css';
 
 export class Kontact extends Component {
   state = {
-    sunbau: {},
-    menuItem: {selectedItem:4}
+    sunbau: {}
+  }
+  navState = {
+    menuItem: {selectedItem:4, menuType:1}
   }
   getSunbau() {
     this.setState({sunbau : JsonData})
@@ -19,13 +21,24 @@ export class Kontact extends Component {
   render() {
     return (
       <div >
-        <Headernavigation data={this.state.menuItem}/>
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <div id="kontakt">
+        {this.props.data ?  this.props.data.menuType!==0 ? 
+          <div>
+            <Headernavigation data={this.props.data}/>
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div> :"" : 
+          <div>
+            <Headernavigation data={this.navState.menuItem}/>
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>}
+        <div id="kontakt" class="pageSection topPageSection kontaktSection">
           <div className="container" >
             <div className="col-md-8">
               <div className="row">
@@ -110,7 +123,7 @@ export class Kontact extends Component {
             <br/>{" "}
           </div>
         </div>
-        <Footernavigation  data={this.state.menuItem}/>
+        {this.props.data ?  this.props.data.menuType!==0 ? <Footernavigation data={this.props.data}/> :"" : <Footernavigation data={this.navState.menuItem}/>}
       </div>
     );
   }

@@ -4,30 +4,45 @@ import Footernavigation from './footernavigation';
 import { Link } from "react-scroll"; //, animateScroll as scroll
 import JsonData from '../data/data.json';
 import '../App.css';
-import $ from 'jquery';
 
 
 export class Home extends Component {
   state = {
-    sunbau: {},
-    menuItem: {selectedItem:1}
+    sunbau: {}
+  }
+  navState = {
+    menuItem: {selectedItem:1, menuType:1}
   }
   getSunbau() {
     this.setState({sunbau : JsonData})
   }
 
   componentDidMount() {
+    //let menuType = this.props.data.menuType
     this.getSunbau();
-    //alert(this.state.menuItem.selectedItem);
+    //alert(menuType);
   }
   render() {
     return (
       <div>
-        <Headernavigation data={this.state.menuItem}/>
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <header id="home">
+        {this.props.data ?  this.props.data.menuType!==0 ? 
+          <div>
+            <Headernavigation data={this.props.data}/> 
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>
+          : 
+            "" 
+          : 
+          <div>
+            <Headernavigation data={this.navState.menuItem}/>
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>
+        }
+        <header id="home" class="pageSection topPageSection homeSection">
           {/* <div className="intro">
             <div className="overlay">
               <div className="container">
@@ -84,7 +99,7 @@ export class Home extends Component {
           </div>
 
         </header>
-        <Footernavigation  data={this.state.menuItem}/>
+        {this.props.data ?  this.props.data.menuType!==0 ? <Footernavigation data={this.props.data}/> :"" : <Footernavigation data={this.navState.menuItem}/>}
       </div>
     );
   }

@@ -6,8 +6,10 @@ import '../App.css';
 
 export class StellenAnZeigen extends Component {
   state = {
-    sunbau: {},
-    menuItem: {selectedItem:5}
+    sunbau: {}
+  }
+  navState = {
+    menuItem: {selectedItem:5, menuType:1}
   }
   getSunbau() {
     this.setState({sunbau : JsonData})
@@ -19,11 +21,24 @@ export class StellenAnZeigen extends Component {
   render() {
     return (
       <div>
-        <Headernavigation data={this.state.menuItem}/>
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <div id="stellenanzeigen" >
+        {this.props.data ?  this.props.data.menuType!==0 ? 
+          <div>
+            <Headernavigation data={this.props.data}/> 
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>
+          : 
+            "" 
+          : 
+          <div>
+            <Headernavigation data={this.navState.menuItem}/>
+            <br/>{" "}
+            <br/>{" "}
+            <br/>{" "}
+          </div>
+        }
+        <div id="stellenanzeigen" class="pageSection topPageSection stellenanzeigenSection">
           <div className="container">
             <h2>Lernen Sie uns kennen</h2>
             <div className="row">
@@ -44,7 +59,7 @@ export class StellenAnZeigen extends Component {
             </div>
           </div>
         </div>
-        <Footernavigation  data={this.state.menuItem}/>
+        {this.props.data ?  this.props.data.menuType!==0 ? <Footernavigation data={this.props.data}/> :"" : <Footernavigation data={this.navState.menuItem}/>}
       </div>
     );
   }
