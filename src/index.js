@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
-import Home from './components/Home';
-import Fokus from './components/fokus';
-import Team from './components/team';
-import Kontakt from './components/kontakt';
-import StellenAnzeigen from './components/stellenanzeigen';
-import Impressum from './components/impressum';
-import DatenSchutz from './components/datenxchutz';
+// import Home from './components/Home';
+// import Fokus from './components/fokus';
+// import Team from './components/team';
+// import Kontakt from './components/kontakt';
+// import StellenAnzeigen from './components/stellenanzeigen';
+// import Impressum from './components/impressum';
+// import DatenSchutz from './components/datenxchutz';
 //import reportWebVitals from './reportWebVitals';
 //import { Route, Switch } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ ReactDOM.render(
       <Route path="/" exact>
         <App />
       </Route>
-      <Route path="/Home" exact>
+      {/* <Route path="/Home" exact>
         <Home />
       </Route>
       <Route path="/fokus" exact>
@@ -46,7 +46,7 @@ ReactDOM.render(
       </Route>
       <Route path="/datenSchutz" exact>
         <DatenSchutz />
-      </Route>
+      </Route> */}
       {/* <Route exact path="/" component={App}/>
       <Route exact path="/home" component={Home}/>
       <Route exact path="/fokus" component={Fokus}/> */}
