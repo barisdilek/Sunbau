@@ -43,17 +43,25 @@ export class Impressum extends Component {
             <h2>Impressum</h2>
             <div className="row">
               <div className="col-md-8 col-md-offset-0">
-                <p>
-                  In den meisten Ländern der Welt ist gesetzlich vorgeschrieben, dass Websites, die nicht ausschließlich privaten oder persönlichen Zwecken dienen, ein rechtsgültiges Impressum enthalten müssen. Das gilt auch für Websites, die einen Blog oder journalistische Texte veröffentlichen.
-                </p>
-                <p>
-                  Der Name der für den Inhalt verantwortlichen Person muss im Impressum genannt werden, mit Adresse und einer Möglichkeit der Kontaktaufnahme. Das kann zum Beispiel eine Telefonnummer oder eine Emailadresse sein. Darüberhinaus können je nach Rechtslage in deinem Land weitere Informationen nötig sein. Bitte ziehe einen lokalen Experten zurate, um dich zu informieren, wie dein Impressum genau aussehen muss.
-                </p>
+                {this.state.sunbau.Impressum
+                        ? this.state.sunbau.Impressum.contents.map((d, i) => (
+                            <p key={`divhome-${i}`}>
+                              {d.content}
+                            </p>
+                          ))
+                        : "loading"}
+                
                 <br/>{" "}
                 <br/>{" "}
                 <br/>{" "}
                 <p>
-                  Bildnachweis: <a href="http://unsplash.com/photos/l1xuT0eR56E?utm_source=jimdo_dolphin&amp;utm_medium=referral" target="_blank" rel="noreferrer noopener">Norbert Levajsics</a> on <a href="https://unsplash.com/?utm_source=jimdo_dolphin&amp;utm_medium=referral" target="_blank" rel="noreferrer noopener">Unsplash</a>, <a href="https://unsplash.com/photos/ZgmGq_eFmUs?utm_source=jimdo_dolphin&amp;utm_medium=referral" target="_blank" rel="noreferrer noopener">Jamar  Penny</a> on <a href="https://unsplash.com/?utm_source=jimdo_dolphin&amp;utm_medium=referral" target="_blank" rel="noreferrer noopener">Unsplash</a>
+                  Bildnachweis:
+                  {this.state.sunbau.Impressum ? <a href={"mailto:"+this.state.sunbau.Impressum.bildnachweis.link1} target="_blank" rel="noreferrer noopener">{this.state.sunbau.Impressum.bildnachweis.linkTitle1}</a> : "loading"}
+                  {" "}on{" "}
+                  {this.state.sunbau.Impressum ? <a href={"mailto:"+this.state.sunbau.Impressum.bildnachweis.link2} target="_blank" rel="noreferrer noopener">{this.state.sunbau.Impressum.bildnachweis.linkTitle2}</a> : "loading"},{" "}
+                  {this.state.sunbau.Impressum ? <a href={"mailto:"+this.state.sunbau.Impressum.bildnachweis.link3} target="_blank" rel="noreferrer noopener">{this.state.sunbau.Impressum.bildnachweis.linkTitle3}</a> : "loading"}
+                  {" "}on {" "}
+                  {this.state.sunbau.Impressum ? <a href={"mailto:"+this.state.sunbau.Impressum.bildnachweis.link4} target="_blank" rel="noreferrer noopener">{this.state.sunbau.Impressum.bildnachweis.linkTitle4}</a> : "loading"}
                 </p>
               </div>
             </div>

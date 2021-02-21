@@ -83,7 +83,7 @@ export class Home extends Component {
             <div id="subHeader">{" "}</div>
               {this.state.sunbau.Main
                 ? this.state.sunbau.Main.themen.map((d, i) => (
-                    <div  key={`divhome-${i}`} className="col-md-4 col-sm-8 thema">
+                    <div  key={`divhome-${i}`} className="col-md-4 col-sm-12 thema">
                       <div className="thumbnail">
                         {" "}
                         <img src={`img/thema/${d.img}`}  alt="..." className="thema-img" />

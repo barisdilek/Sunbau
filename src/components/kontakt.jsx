@@ -71,7 +71,7 @@ export class Kontact extends Component {
                     <span>
                       <i className="fa fa-phone"></i> {this.state.sunbau.Kontakt ? this.state.sunbau.Kontakt.phoneTitle : "loading"}
                     </span>{" "}
-                    {this.state.sunbau.Kontakt ? <a href={"tel:"+this.state.sunbau.Kontakt.phone}>{this.state.sunbau.Kontakt.phone}</a> : "loading"}
+                    {this.state.sunbau.Kontakt ? <a href={"tel:"+this.state.sunbau.Kontakt.phone} target="_blank" rel="noreferrer noopener">{this.state.sunbau.Kontakt.phone}</a> : "loading"}
                   </p>
                 </div>
                 <div className="contact-item">
@@ -79,7 +79,7 @@ export class Kontact extends Component {
                     <span>
                       <i className="fa fa-envelope-o"></i> {this.state.sunbau.Kontakt ? this.state.sunbau.Kontakt.emailTitle : "loading"}
                     </span>{" "}
-                    {this.state.sunbau.Kontakt ? <a href={"mailto:"+this.state.sunbau.Kontakt.email}>{this.state.sunbau.Kontakt.email}</a> : "loading"}
+                    {this.state.sunbau.Kontakt ? <a href={"mailto:"+this.state.sunbau.Kontakt.email} target="_blank" rel="noreferrer noopener">{this.state.sunbau.Kontakt.email}</a> : "loading"}
                   </p>
                 </div>
               </div>

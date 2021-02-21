@@ -57,14 +57,14 @@ export class Headernavigation extends Component {
   render() {
     return (
           <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-            <div className="container">
+            {/* <div className="container"> */}
               <div className="col-md-4 col-md-offset-0 logo">
                   <Link2 id="pageTop" href="#page-top" className="navbar-brand page-scroll" to="home" spy={true} smooth={true}  duration={1000}>
                   <img src="./img/logo.jpg" alt="" className="navbar-brand-img" />
                   </Link2>
                    <br/><span>{"“Wir schaffen Verbindungen”"}</span>
               </div>
-              <div className="col-md-8 col-md-offset-0">
+              <div className="col-md-12 col-sm-0 col-md-offset-0">
                 <div className="navbar-header">
                   <button
                     type="button"
@@ -78,12 +78,9 @@ export class Headernavigation extends Component {
                     <span className="icon-bar"></span>{" "}
                     <span className="icon-bar"></span>{" "}
                   </button>
-                  
-                  
-            
                 </div>
-              </div>
-              <div className="col-md-12 col-md-offset-8">
+              {/* </div> */}
+              <div className="col-md-12 ol-sm-12 col-md-offset-6">
                 <div className="  collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul className="nav navbar-nav navbar-left">
                     {

@@ -57,18 +57,7 @@ export class Fokus extends Component {
 
           </div>
         </div>
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
-        <br/>{" "}
+        
         {this.props.data ?  this.props.data.menuType!==0 ? <Footernavigation data={this.props.data}/> :"" : <Footernavigation data={this.navState.menuItem}/>}
       </div>
     );
